@@ -2,6 +2,7 @@ const User = require("../models/user");
 
 async function userSignup(req, res){
     try{
+        console.log(req);
         const {fullName, email, password} = req.body;
         await User.create({
             fullName,
